@@ -4,7 +4,7 @@
 
   # COI Engenharia - Plataforma Corporativa Enterprise
   
-  **Sistema Integrado de Gestão de Obras, GED e Intranet com Inteligência Artificial.**
+  **Sistema Integrado de Gestão de Obras, GED e Intranet com Inteligência Artificial. - https://coiengenharia.com.br/**
 
   [![PHP Version](https://img.shields.io/badge/php-8.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
   [![Database](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
@@ -22,7 +22,7 @@
 
 Esta plataforma foi desenvolvida para atender às demandas de alta complexidade da **COI Engenharia**, uma empresa especializada em obras industriais e infraestrutura pesada. 
 
-Diferente de CMSs padrões, este sistema foi construído **do zero (Vanilla PHP)** focando em performance extrema, segurança granular ("Defense in Depth") e integração nativa com Inteligência Artificial para suporte operacional.
+Diferente de CMSs padrões, este sistema foi construído **do zero (Vanilla PHP)** pelo Antigravity focando em performance extrema, segurança granular ("Defense in Depth") e integração nativa com Inteligência Artificial para suporte operacional.
 
 ### 📸 Screenshots
 

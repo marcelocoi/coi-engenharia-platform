@@ -116,7 +116,7 @@ O sistema é dividido em dois núcleos que compartilham o mesmo banco de dados, 
 
 | **GED: Experiência Desktop na Web** |
 |:---:|
-| <a href="assets/Sistema de documentação online estilo windows explorer.png" target="_blank"><img src="assets/Sistema de documentação online estilo windows explorer.png" alt="GED estilo Windows Explorer" width="100%"></a> |
+| <a href="assets/ged_explorer.png" target="_blank"><img src="assets/ged_explorer.png" alt="GED estilo Windows Explorer" width="100%"></a> |
 | *Gestão de documentos com UX similar ao Windows Explorer (Pastas, Ícones, Arrastar e Soltar)* |
 
 ---

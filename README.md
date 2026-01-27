@@ -124,7 +124,65 @@ O sistema é dividido em dois núcleos que compartilham o mesmo banco de dados, 
 | *Monitoramento de origem de IPs em tempo real (HTTPS) Resumo de Tráfego (Webalizer)* |
 
 ---
+---
 
+## 🤖 Case Real: Engenharia de Prompt (Módulo Cronograma)
+
+Uma das funcionalidades mais complexas deste sistema é o **Cronograma de Obras**, que replica funcionalidades do MS Project (Gráfico de Gantt Interativo, Caminho Crítico CPM e Edição estilo Excel) usando apenas Vanilla PHP e D3.js.
+
+Para atingir esse nível de complexidade sem frameworks, foi necessário utilizar **Engenharia de Prompt Sênior**, definindo arquitetura, stack e comportamento de UI antes de uma única linha de código ser gerada.
+
+Abaixo está o prompt exato ("The Ultimate Refactor") enviado ao Agente (Antigravity/Gemini) para transformar um protótipo falho em um módulo de produção:
+
+<details>
+<summary>📄 <strong>Clique para expandir o Prompt de Engenharia Sênior</strong></summary>
+
+```markdown
+@senior-fullstack @ui-ux-pro-max @frontend-dev-guidelines @d3-viz @mobile-design @systematic-debugging @database-design
+
+**ULTIMATE REFACTOR: Cronograma Interativo (Excel-Like) + Gantt Responsivo + Painel PMO**
+
+**Contexto Atual (Baseado nas Prints):**
+O sistema atual renderiza uma tabela estática incompleta (falta a Data Término) e o gráfico D3.js não está aparecendo (tela branca à direita).
+
+**NOVOS REQUISITOS CRÍTICOS (Must-Have):**
+1.  **Edição "Excel-Mode" (Inline Editing):** O usuário deve poder clicar duas vezes em *qualquer* célula (Nome, Duração, Início) e editar ali mesmo, sem abrir modal. Ao sair do campo (`blur`), o sistema deve salvar via AJAX e recalcular todo o cronograma.
+2.  **Visualização Completa:** A tabela deve mostrar: ID, Nome, Duração, Início, **Término** (Calculado: Início + Duração) e Predecessoras.
+3.  **Correção do Gráfico (White Screen Fix):** O container do D3.js está colapsando. É necessário forçar dimensões e garantir que o SVG seja desenhado.
+4.  **Responsividade Mobile Premium:** Em telas pequenas, o layout deve se adaptar (ex: Stack vertical ou Tabela com scroll horizontal fixo e Gráfico abaixo).
+5.  **Painel PMO (Curva S):** Implementar visualização de avanço físico/financeiro.
+
+**PLANO DE EXECUÇÃO TÉCNICA:**
+
+**FASE 1: O Grid Interativo "Excel-Like" (@frontend-dev-guidelines)**
+Reescreva a geração da tabela HTML no `cronograma.php`.
+* Em vez de texto simples, use `<td contenteditable="true">` ou inputs sem borda que ganham foco ao clique.
+* **JavaScript de Auto-Save:** Crie um listener que detecta alterações. Ao mudar a "Duração" de 2d para 5d, o sistema deve disparar um POST para o backend, atualizar o banco, recalcular as datas das sucessoras e atualizar o gráfico imediatamente (Hot-Reload sem refresh).
+* **Coluna Término:** Adicione esta coluna visualmente. O valor deve ser `readonly` (calculado), mas se o usuário mudar a Duração, o Término atualiza visualmente na hora.
+
+**FASE 2: O Motor Gráfico D3.js (@d3-viz)**
+* **Correção de Render:** Defina o CSS do container `#gantt-chart` com `min-height: 100%; width: 100%; display: block;`.
+* **Escalas:** Implemente `d3.scaleTime` mapeando as datas de Início/Fim para o eixo X.
+* **Interatividade:** Ao passar o mouse na barra do gráfico, mostrar tooltip com detalhes.
+
+**FASE 3: Responsividade e Layout Premium (@mobile-design @ui-ux-pro-max)**
+* Use **CSS Grid** com Media Queries:
+    * *Desktop:* `grid-template-columns: 40% 60%;` (Tabela Esquerda | Gráfico Direita).
+    * *Mobile:* `grid-template-columns: 100%;` (Tabela em cima, Gráfico embaixo, ou abas alternáveis "Dados | Gráfico").
+* **Estilo:** Use fontes tipográficas modernas (Inter ou Roboto), bordas sutis (#e5e7eb), e header fixo na tabela para não perder o cabeçalho ao rolar.
+
+**FASE 4: Painel PMO e Curva S**
+* Adicione um botão "📊 Dashboard PMO" no topo.
+* Ao clicar, abre um Overlay/Modal de tela cheia mostrando:
+    * **Curva S:** Gráfico de Linha (Chart.js ou D3) com dois eixos: % Planejado (Baseado na duração decorrida) vs % Realizado (Campo que você deve criar no banco: `progress_pct`).
+    * **Cards de KPI:** Total de Tarefas, Tarefas Atrasadas, Data Final Prevista.
+
+**Entregáveis:**
+1.  **Código `cronograma.php` Completo:** Unificado (CSS, HTML, JS) para evitar erros de importação.
+2.  **Lógica JS de "Live Editing":** A função que captura o `dblclick`, transforma em input, salva e atualiza o D3.
+3.  **SQL Update:** Query para adicionar a coluna `progress_pct` (necessária para a Curva S) e `cost` (para Curva S financeira, se houver).
+
+*Nota: Seja extremamente rigoroso com o CSS do container do gráfico. Se a altura for 0, o D3 não desenha nada.*
 ## 👨‍💻 Convite aos Code Reviewers
 
 Se você chegou aqui através do vídeo sobre a criação deste sistema: **Bem-vindo.**

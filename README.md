@@ -14,16 +14,17 @@
   <a href="https://www.php.net/" target="_blank">
     <img src="https://img.shields.io/badge/php-8.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP Version">
   </a>
-  <a href="#-arquitetura-e-filosofia-no-framework">
+  <a href="#arquitetura-e-filosofia-no-framework">
     <img src="https://img.shields.io/badge/Architecture-Vanilla%20MVC-important?style=for-the-badge&logo=architect&logoColor=white" alt="Architecture">
   </a>
-  <a href="#-o-desafio-ia-vs-qualidade">
+  <a href="#o-desafio-ia-vs-qualidade">
     <img src="https://img.shields.io/badge/Built_With-Gemini_2.0_%26_Antigravity-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white" alt="AI Engine">
   </a>
+  <img src="https://img.shields.io/badge/Status-Production-success?style=for-the-badge" alt="Status Production">
 
   <br><br>
 
-  [O Desafio](#-o-propósito-deste-repositório) • [Segurança Comprovada](#-segurança-militar-defense-in-depth) • [Ecossistema](#-ecossistema-técnico) • [Intranet](#-módulo-restrito-intranet--rdo) • [Convite à Análise](#-convite-aos-code-reviewers)
+  [O Desafio](#o-propósito-deste-repositório) • [Segurança Comprovada](#segurança-militar-defense-in-depth) • [Ecossistema](#ecossistema-técnico) • [Intranet](#2-intranet-corporativa-backend-restrito) • [Convite à Análise](#convite-aos-code-reviewers)
 
 </div>
 

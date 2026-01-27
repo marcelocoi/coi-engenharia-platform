@@ -58,7 +58,7 @@ Os relatórios abaixo são gerados em tempo real por autoridades independentes e
 
 | **SecurityHeaders A+ (Grade Máxima)** | **CoreNexis Compliance** |
 |:---:|:---:|
-| <a href="assets/security_score.png" target="_blank"><img src="assets/security_score.png" alt="Print SecurityHeaders A+" width="100%"></a> | <a href="assets/corenexis.png" target="_blank"><img src="assets/security_score1.png" alt="Print CoreNexis" width="100%"></a> |
+| <a href="assets/security_score.png" target="_blank"><img src="assets/security_score.png" alt="Print SecurityHeaders A+" width="100%"></a> | <a href="assets/security_score1.png" target="_blank"><img src="assets/security_score1.png" alt="Print CoreNexis" width="100%"></a> |
 | *Auditoria de 27/01/2026* | *Validação de Headers Críticos* |
 
 ### Implementação Técnica (Hardening)

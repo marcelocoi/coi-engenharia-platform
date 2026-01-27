@@ -131,11 +131,11 @@ Este projeto prova que a **Inteligência Artificial**, quando guiada por um prof
 ## 👤 Autor
 
 **Eng. Marcelo de Barros**
-*CEO da COI Engenharia | Desenvolvedor Full Stack*
+*CEO da COI Engenharia | Desenvolvedor Full Stack I.A*
 
 Liderando a transformação digital na construção civil pesada através de código proprietário e seguro.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/108664081/) 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marcelocoi/) 
 [![COI Engenharia](https://img.shields.io/badge/COI_Engenharia-Website_Oficial-0D2C54?style=for-the-badge&logo=google-chrome&logoColor=white)](https://coiengenharia.com.br)
 
 ---

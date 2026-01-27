@@ -2,17 +2,17 @@
 
   <img src="src/public_site/LOGO.png" alt="COI Engenharia Logo" width="150" />
 
-  # COI Engenharia - Plataforma de Gestão & Inteligência
+  # COI Engenharia - Plataforma de Gestão & Inteligência Corporativa
   
-  **Sistema Integrado de Engenharia (RDO), GED e IA Corporativa para Obras de Alta Complexidade.**
+  **Sistema Integrado de Engenharia (RDO), Gestão Eletrônica de Documentos (GED) e Administração de Obras.**
 
   [![PHP Version](https://img.shields.io/badge/php-8.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
   [![Database](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
-  [![AI Engine](https://img.shields.io/badge/Gemini_2.0-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white)](https://deepmind.google/technologies/gemini/)
-  [![Security](https://img.shields.io/badge/Security-CSP%20%7C%20HSTS-success?style=for-the-badge&logo=security&logoColor=white)](#security)
+  [![Frontend](https://img.shields.io/badge/HTML5%20%2F%20JS-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+  [![Security](https://img.shields.io/badge/Security-CSP%20%7C%20HSTS-success?style=for-the-badge&logo=security&logoColor=white)](#-cybersecurity--compliance)
   [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-  [Sobre](#-contexto-e-propósito) • [Funcionalidades](#-funcionalidades-de-engenharia) • [Stack](#-%EF%B8%8F-arquitetura-e-stack) • [Segurança](#-cybersecurity--compliance) • [Instalação](#-instalação)
+  [Sobre](#-contexto-e-propósito) • [Módulos](#-funcionalidades-e-módulos) • [Stack](#-%EF%B8%8F-arquitetura-e-stack) • [Segurança](#-cybersecurity--compliance) • [Instalação](#-instalação)
 
 </div>
 
@@ -20,82 +20,86 @@
 
 ## 🏗️ Contexto e Propósito
 
-Esta plataforma proprietária foi desenvolvida para sustentar a operação da **COI Engenharia**, uma empresa referência em obras industriais, infraestrutura rodoviária e geotecnia, sediada em Rio Claro/SP.
+Esta plataforma proprietária (ERP Técnico) foi desenvolvida sob medida para a **COI Engenharia** para centralizar a gestão operacional de obras de infraestrutura, terraplenagem e pavimentação. O sistema elimina o uso de papel no canteiro de obras, digitalizando processos críticos e garantindo rastreabilidade total.
 
-O sistema não é apenas um site, mas um **ERP Técnico** sob medida que gerencia contratos de grandes clientes (como **Grupo Assaí, Citrosuco, EIXO-SP e Grupo Muffato**), garantindo que a gestão da informação acompanhe o rigor técnico das obras de terraplenagem e pavimentação.
-
-### Por que Vanilla PHP?
-Para garantir **performance extrema** em canteiros de obras com conectividade instável (3G/4G) e longevidade do código (LTS) sem dependência de ciclos de atualização de frameworks de terceiros.
+O foco do desenvolvimento foi **Performance (Vanilla PHP)** e **Segurança (Defense in Depth)**, garantindo operabilidade mesmo em conexões instáveis de campo.
 
 ---
 
 ## 📸 Interface do Sistema
 
-| **Intranet & Dashboard Operacional** | **Assistente Técnico (IA Gemini)** |
+| **Dashboard Geral & Monitoramento** | **Gestão Eletrônica de Documentos (GED)** |
 |:---:|:---:|
-| <img src="assets/intranet.png" alt="Dashboard RDO" width="100%"> | <img src="assets/chat_ia.png" alt="Chatbot Engenharia" width="100%"> |
-| *Visão em tempo real de contratos e segurança* | *IA treinada em NRs e dados da empresa* |
-
-| **Engenharia de Software (Clean Code)** |
-|:---:|
-| <img src="assets/1.png" alt="VS Code Structure" width="100%"> |
-| *Arquitetura MVC pura, organizada e segura* |
+| <img src="assets/intranet.png" alt="Dashboard Intranet" width="100%"> | <img src="assets/1.png" alt="Gestão de Arquivos" width="100%"> |
+| *Monitoramento de segurança e logs em tempo real* | *Interface Windows-like para gestão de arquivos* |
 
 ---
 
-## ✨ Funcionalidades de Engenharia
+## ✨ Funcionalidades e Módulos
 
-O sistema resolve dores específicas da construção civil pesada:
+O sistema é dividido em módulos integrados com controle de acesso baseado em cargos (RBAC).
 
-### 🧠 1. IA Corporativa (Gemini 2.0 Integration)
-Agente virtual integrado via API REST que atua como "Engenheiro Assistente":
-* **Consultas Técnicas:** Responde sobre acervo técnico e capacidades (ex: volume de terraplenagem, tipos de pavimentação).
-* **Filtro Comercial:** Triagem automática de leads e fornecedores antes do contato humano.
-* **Contexto:** System Prompt com engenharia de contexto baseada no portfólio real da COI.
+### 📋 1. RDO Digital (Relatório Diário de Obras)
+Substituição completa dos diários de papel por um fluxo digital auditável.
+* **Registro Climático:** Monitoramento manhã/tarde com condições de praticabilidade.
+* **Gestão de Ativos:** Controle detalhado de efetivo (Mão de Obra) e Maquinário (Equipamentos) alocados.
+* **Fluxo de Aprovação:** Sistema de validação em 3 níveis (Engenheiro, Fiscalização, Administração).
+* **PDF Engine:** Geração automática de relatórios em PDF prontos para impressão/assinatura.
+* **Evidências:** Galeria de fotos integrada com upload múltiplo e timestamps.
+* **Histórico:** Log completo de edições e visualizações (quem viu, quem alterou).
 
-### 📋 2. RDO Digital (Relatório Diário de Obras)
-Substituição dos diários de papel por registros digitais auditáveis:
-* **Clima & Pluviometria:** Registro preciso das condições meteorológicas (impacto direto em cronogramas).
-* **Gestão de Ativos:** Controle de efetivo e maquinário pesado alocado por obra.
-* **Evidência Fotográfica:** Galeria segura para documentação de avanço físico.
+### 📂 2. GED (Gestão Eletrônica de Documentos)
+Um "Windows Explorer" web para gestão de acervo técnico.
+* **Interface Intuitiva:** Navegação por pastas, breadcrumbs e ícones dinâmicos por tipo de arquivo.
+* **Operações em Lote:** Upload via AJAX (Drag & Drop), exclusão em massa e **Download ZIP** on-the-fly.
+* **Organização:** Criação de pastas e estruturação hierárquica de projetos.
+* **Segurança:** Logs de upload, download e exclusão vinculados ao IP e Usuário.
 
-### 🔐 3. GED Técnico (Gestão Eletrônica de Documentos)
-Repositório centralizado para projetos executivos e ARTs:
-* **Estrutura de Pastas Dinâmica:** Navegação hierárquica similar ao Windows Explorer.
-* **Download em Lote:** Compressão ZIP on-the-fly para pacotes de documentos.
-* **Controle de Acesso:** Permissões granulares baseadas em cargo (Engenheiro, Mestre, Administrativo).
+### 📊 3. Dashboard & BI
+Visualização estratégica para tomada de decisão.
+* **KPIs de Obras:** Gráficos (Chart.js) de status de relatórios (Pendentes vs. Aprovados).
+* **Matriz de Produtividade:** Visão geral de envios de RDOs por obra nos últimos 14 dias.
+* **Auditoria de Segurança:** Monitoramento de tentativas de invasão, erros PHP e atividade de usuários em tempo real.
+
+### 👥 4. Gestão de Acessos
+* **Autenticação Híbrida:** Suporte a login local e integração via **IMAP/POP3** (Webmail Corporativo).
+* **Controle de Usuários:** CRUD de usuários com vinculação específica a obras (O usuário vê apenas as obras permitidas).
+* **Proteção:** Bloqueio temporário após tentativas falhas de login (Brute-force protection).
 
 ---
 
 ## 🛠️ Arquitetura e Stack
 
-| Componente | Tecnologia | Justificativa Técnica |
+O projeto segue princípios de **Clean Code** sem dependência excessiva de frameworks pesados, priorizando velocidade.
+
+| Componente | Tecnologia | Detalhes |
 | :--- | :--- | :--- |
-| **Backend** | **PHP 8.2+ (Vanilla)** | Baixa latência, zero overhead, tipagem forte. |
-| **Database** | **MySQL / MariaDB** | Conformidade ACID e alta disponibilidade. |
-| **Frontend** | **HTML5 / CSS3 / JS** | Design System próprio, sem dependência de npm/node_modules. |
-| **AI Core** | **Google Gemini API** | Modelo 2.0 Flash para inferência rápida e baixo custo. |
-| **Server** | **Apache / Nginx** | Compatibilidade total com servidores Linux/Windows. |
+| **Backend** | **PHP 8.x (Vanilla)** | Arquitetura MVC própria, sem frameworks (Laravel/Symfony), garantindo baixa latência. |
+| **Database** | **MySQL / MariaDB** | Uso de **PDO** com Prepared Statements para segurança total dos dados. |
+| **Frontend** | **HTML5 / CSS3** | Design System próprio responsivo (Mobile-first) inspirado no Windows 11 e Dashboards modernos. |
+| **JS Libs** | **Vanilla JS** | + Chart.js (Gráficos) e Feather Icons (Ícones leves). |
+| **Server** | **Apache / Nginx** | Compatível com ambientes Linux e Windows Server. |
 
 ---
 
 ## 🔒 Cybersecurity & Compliance
 
-A segurança implementa o conceito de **Defense in Depth** (Defesa em Profundidade):
+A segurança implementa o conceito de **Defense in Depth** (Defesa em Profundidade), auditável via logs no banco de dados:
 
-* **[CSP] Content Security Policy:** Bloqueio nativo de XSS e injeção de scripts não autorizados.
-* **[HSTS] Strict Transport Security:** Força criptografia TLS/SSL em todas as requisições.
-* **[Anti-Bot] Rate Limiting & Honeypot:** Proteção contra ataques de força bruta e crawlers sem uso de CAPTCHA intrusivo.
-* **[Sanitização] Input Filtering:** Tratamento recursivo de todas as entradas (`$_GET`, `$_POST`) contra SQL Injection.
-* **[Sessão] Session Hardening:** Cookies `HttpOnly` e `Secure` com regeneração de ID para evitar sequestro de sessão.
+* **[CSP] Content Security Policy:** Headers rigorosos prevenindo XSS e injeção de scripts.
+* **[Session Hardening]**: Cookies `HttpOnly`, `Secure`, `Strict` e regeneração de ID de sessão.
+* **[Logs de Auditoria]**: Registro imutável de logins (sucesso/falha), uploads, downloads e edições de registros.
+* **[Sanitização]**: Tratamento recursivo de inputs e uploads de arquivos (verificação de extensão/MIME).
+* **[Anti-Bruteforce]**: Limitação de tentativas de login por sessão/IP.
 
 ---
 
 ## ⚙️ Instalação
 
 ### Pré-requisitos
-* PHP 8.0 ou superior (com extensões `curl`, `pdo`, `mbstring`).
+* PHP 8.0+ (extensões: `pdo`, `mbstring`, `zip`, `gd`, `curl`).
 * MySQL 5.7+ ou MariaDB.
+* Servidor Web (Apache com `mod_rewrite` ativado).
 
 ### Passo a Passo
 
@@ -105,24 +109,26 @@ A segurança implementa o conceito de **Defense in Depth** (Defesa em Profundida
     ```
 
 2.  **Banco de Dados:**
-    * Crie um banco vazio.
-    * Importe o script `database/schema.sql` para criar as tabelas e índices.
+    * Importe o script `database/schema.sql` para criar a estrutura inicial.
+    * O sistema criará automaticamente um usuário `admin` padrão se a tabela estiver vazia na inicialização.
 
 3.  **Configuração:**
-    * Renomeie `src/config/db_config.example.php` para `db_config.php` e insira suas credenciais.
-    * Crie um arquivo `.env` na raiz contendo: `GEMINI_API_KEY=sua_chave_aqui`.
+    * Renomeie `src/config/db_config.example.php` para `db_config.php`.
+    * Configure as credenciais do banco de dados e chave de API (se aplicável).
 
-4.  **Deploy:**
-    * Configure o DocumentRoot do servidor para a pasta raiz.
-    * Acesse `/src/public_site` (Site Institucional) ou `/src/intranet` (Sistema).
+4.  **Permissões:**
+    * Garanta permissão de escrita nas pastas:
+      * `/src/intranet/data/logs/`
+      * `/src/intranet/data/uploads/`
+      * `/src/intranet/data/ged_repository/`
 
 ---
 
-## 👤 Autor e Liderança
+## 👤 Autor
 
-**Eng. Marcelo de Barros** *CEO da COI Engenharia & Full Stack Developer*
+**Eng. Marcelo de Barros** *CEO da COI Engenharia & Full Stack Developer por I.A*
 
-Engenheiro Civil com mais de 20 anos de experiência em obras de grande porte (Usina Nuclear Angra 3, Beto Carrero World, Rodovias) e desenvolvedor de soluções tecnológicas aplicadas à construção civil.
+Engenheiro Civil com expertise em grandes obras (Usina Nuclear Angra 3, Rodovias) e desenvolvimento de soluções tecnológicas para o setor de construção civil.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/108664081/) 
 [![COI Engenharia](https://img.shields.io/badge/COI_Engenharia-Website_Oficial-0D2C54?style=for-the-badge&logo=google-chrome&logoColor=white)](https://coiengenharia.com.br)
@@ -130,5 +136,5 @@ Engenheiro Civil com mais de 20 anos de experiência em obras de grande porte (U
 ---
 
 <div align="center">
-  <sub>Copyright © 2026 COI Engenharia. Todos os direitos reservados. Código distribuído sob licença MIT para fins de portfólio.</sub>
+  <sub>Copyright © 2026 COI Engenharia. Todos os direitos reservados.</sub>
 </div>

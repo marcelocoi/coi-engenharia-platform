@@ -2,104 +2,119 @@
 
   <img src="src/public_site/LOGO.png" alt="COI Engenharia Logo" width="150" />
 
-  # COI Engenharia - Plataforma de Gestão & Inteligência Corporativa
+  # COI Engenharia - Ecossistema Digital Integrado
   
-  **Sistema Integrado de Engenharia (RDO), Gestão Eletrônica de Documentos (GED) e Administração de Obras.**
+  **Plataforma Híbrida: Site Institucional de Alta Performance & Intranet de Gestão de Engenharia.**
 
   [![PHP Version](https://img.shields.io/badge/php-8.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
   [![Database](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
-  [![Frontend](https://img.shields.io/badge/HTML5%20%2F%20JS-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
   [![Security](https://img.shields.io/badge/Security-CSP%20%7C%20HSTS-success?style=for-the-badge&logo=security&logoColor=white)](#-cybersecurity--compliance)
+  [![AI Engine](https://img.shields.io/badge/Gemini_2.0-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white)](https://deepmind.google/technologies/gemini/)
   [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-  [Sobre](#-contexto-e-propósito) • [Módulos](#-funcionalidades-e-módulos) • [Stack](#-%EF%B8%8F-arquitetura-e-stack) • [Segurança](#-cybersecurity--compliance) • [Instalação](#-instalação)
+  [Visão Geral](#-visão-geral-do-ecossistema) • [Site Público](#-módulo-1-site-institucional-público) • [Intranet](#-módulo-2-intranet-corporativa-restrito) • [Segurança](#-cybersecurity--compliance) • [Instalação](#-instalação)
 
 </div>
 
 ---
 
-## 🏗️ Contexto e Propósito
+## 🌐 Visão Geral do Ecossistema
 
-Esta plataforma proprietária (ERP Técnico) foi desenvolvida sob medida para a **COI Engenharia** para centralizar a gestão operacional de obras de infraestrutura, terraplenagem e pavimentação. O sistema elimina o uso de papel no canteiro de obras, digitalizando processos críticos e garantindo rastreabilidade total.
+O ecossistema digital da **COI Engenharia** foi desenvolvido para cobrir duas frentes críticas do negócio: a presença digital de alta conversão (Site) e a gestão operacional rigorosa de obras (Intranet).
 
-O foco do desenvolvimento foi **Performance (Vanilla PHP)** e **Segurança (Defense in Depth)**, garantindo operabilidade mesmo em conexões instáveis de campo.
+Ambos os sistemas compartilham a mesma infraestrutura de servidor e banco de dados, mas operam com camadas de segurança e lógicas de acesso distintas, unificados por uma arquitetura **Vanilla PHP** para máxima performance e longevidade.
 
 ---
 
 ## 📸 Interface do Sistema
 
-| **Dashboard Geral & Monitoramento** | **Gestão Eletrônica de Documentos (GED)** |
+| **Site Institucional (Landing Page)** | **Intranet & RDO Digital** |
 |:---:|:---:|
-| <img src="assets/intranet.png" alt="Dashboard Intranet" width="100%"> | <img src="assets/1.png" alt="Gestão de Arquivos" width="100%"> |
-| *Monitoramento de segurança e logs em tempo real* | *Interface Windows-like para gestão de arquivos* |
+| <img src="assets/chat_ia.png" alt="Site Público" width="100%"> | <img src="assets/intranet.png" alt="Dashboard Intranet" width="100%"> |
+| *Showcase de obras e Chatbot IA* | *Gestão operacional restrita* |
 
 ---
 
-## ✨ Funcionalidades e Módulos
+## 🌍 Módulo 1: Site Institucional (Público)
 
-O sistema é dividido em módulos integrados com controle de acesso baseado em cargos (RBAC).
+Desenvolvido para ser a vitrine tecnológica da empresa, focado em SEO, velocidade e captação de leads qualificados. O código (`src/public_site/index.php`) implementa proteções avançadas nativamente.
 
-### 📋 1. RDO Digital (Relatório Diário de Obras)
-Substituição completa dos diários de papel por um fluxo digital auditável.
-* **Registro Climático:** Monitoramento manhã/tarde com condições de praticabilidade.
-* **Gestão de Ativos:** Controle detalhado de efetivo (Mão de Obra) e Maquinário (Equipamentos) alocados.
-* **Fluxo de Aprovação:** Sistema de validação em 3 níveis (Engenheiro, Fiscalização, Administração).
-* **PDF Engine:** Geração automática de relatórios em PDF prontos para impressão/assinatura.
-* **Evidências:** Galeria de fotos integrada com upload múltiplo e timestamps.
-* **Histórico:** Log completo de edições e visualizações (quem viu, quem alterou).
+### Funcionalidades Principais:
+* **Defense in Depth (Frontend):** Implementação rigorosa de headers de segurança (`Content-Security-Policy`, `X-Frame-Options`, `HSTS`) diretamente no PHP, sem depender de configuração de servidor.
+* **Monitoramento de Tráfego:**
+    * **Geolocalização:** Integração com API para identificar país/cidade do visitante e bloquear tráfego suspeito.
+    * **Log de Visitas:** Registro detalhado de IP, User-Agent e Referer no banco de dados para auditoria.
+    * **Contador de Visitas:** Sistema de contagem atômica (file-based locking) para performance sem overload no banco.
+* **Formulários Blindados:**
+    * **Honeypot Dinâmico:** Campos ocultos que capturam bots de spam sem incomodar o usuário com CAPTCHA.
+    * **Anti-CSRF:** Tokens criptográficos rotativos que impedem falsificação de solicitações.
+    * **Sanitização:** Limpeza recursiva de todas as entradas (`$_POST`/`$_GET`) contra Injeção de Código.
+* **Integração IA:** Interface de chat flutuante conectada ao assistente Gemini para triagem inicial de contatos.
 
-### 📂 2. GED (Gestão Eletrônica de Documentos)
-Um "Windows Explorer" web para gestão de acervo técnico.
-* **Interface Intuitiva:** Navegação por pastas, breadcrumbs e ícones dinâmicos por tipo de arquivo.
-* **Operações em Lote:** Upload via AJAX (Drag & Drop), exclusão em massa e **Download ZIP** on-the-fly.
-* **Organização:** Criação de pastas e estruturação hierárquica de projetos.
-* **Segurança:** Logs de upload, download e exclusão vinculados ao IP e Usuário.
+---
 
-### 📊 3. Dashboard & BI
-Visualização estratégica para tomada de decisão.
-* **KPIs de Obras:** Gráficos (Chart.js) de status de relatórios (Pendentes vs. Aprovados).
-* **Matriz de Produtividade:** Visão geral de envios de RDOs por obra nos últimos 14 dias.
-* **Auditoria de Segurança:** Monitoramento de tentativas de invasão, erros PHP e atividade de usuários em tempo real.
+## 🏢 Módulo 2: Intranet Corporativa (Restrito)
 
-### 👥 4. Gestão de Acessos
-* **Autenticação Híbrida:** Suporte a login local e integração via **IMAP/POP3** (Webmail Corporativo).
-* **Controle de Usuários:** CRUD de usuários com vinculação específica a obras (O usuário vê apenas as obras permitidas).
-* **Proteção:** Bloqueio temporário após tentativas falhas de login (Brute-force protection).
+O "ERP Técnico" da empresa, acessível apenas mediante autenticação, focado na digitalização do canteiro de obras.
+
+### 📋 RDO Digital (Relatório Diário de Obras)
+Substituição dos diários de papel por registros digitais auditáveis.
+* **Registro Climático:** Monitoramento manhã/tarde.
+* **Gestão de Ativos:** Controle de efetivo (Mão de Obra) e Maquinário alocado.
+* **Fluxo de Aprovação:** Validação em 3 níveis (Engenheiro > Fiscal > Admin).
+* **Evidências:** Galeria de fotos com timestamps.
+
+### 📂 GED (Gestão Eletrônica de Documentos)
+* **Interface Windows-like:** Navegação hierárquica por pastas.
+* **Bulk Actions:** Upload Drag & Drop e Download ZIP on-the-fly.
+* **Auditoria:** Logs de quem baixou ou enviou cada arquivo.
+
+### 📊 Dashboard & BI
+* **KPIs:** Gráficos de produtividade e status de relatórios.
+* **Segurança:** Monitoramento em tempo real de tentativas de invasão e erros PHP.
+
+### 👥 Gestão de Acessos
+* **Autenticação Híbrida:** Login local + Integração IMAP/POP3.
+* **RBAC:** Controle de acesso baseado em cargos e obras específicas.
 
 ---
 
 ## 🛠️ Arquitetura e Stack
 
-O projeto segue princípios de **Clean Code** sem dependência excessiva de frameworks pesados, priorizando velocidade.
+O projeto segue princípios de **Clean Code**, priorizando código nativo.
 
-| Componente | Tecnologia | Detalhes |
+| Camada | Tecnologia | Detalhes Técnicos |
 | :--- | :--- | :--- |
-| **Backend** | **PHP 8.x (Vanilla)** | Arquitetura MVC própria, sem frameworks (Laravel/Symfony), garantindo baixa latência. |
-| **Database** | **MySQL / MariaDB** | Uso de **PDO** com Prepared Statements para segurança total dos dados. |
-| **Frontend** | **HTML5 / CSS3** | Design System próprio responsivo (Mobile-first) inspirado no Windows 11 e Dashboards modernos. |
-| **JS Libs** | **Vanilla JS** | + Chart.js (Gráficos) e Feather Icons (Ícones leves). |
-| **Server** | **Apache / Nginx** | Compatível com ambientes Linux e Windows Server. |
+| **Linguagem** | **PHP 8.x (Vanilla)** | Sem frameworks pesados. Uso de `Strict Types` e POO. |
+| **Banco** | **MySQL / MariaDB** | Driver PDO com Prepared Statements e Transactions. |
+| **Frontend** | **HTML5 / CSS3 / JS** | Design System próprio. Site público otimizado para Core Web Vitals. |
+| **API** | **REST / cURL** | Integração nativa com APIs externas (Gemini, IP-API). |
+| **Server** | **Apache / Nginx** | Configuração via `.htaccess` e headers PHP. |
 
 ---
 
 ## 🔒 Cybersecurity & Compliance
 
-A segurança implementa o conceito de **Defense in Depth** (Defesa em Profundidade), auditável via logs no banco de dados:
+A segurança é aplicada em camadas, protegendo tanto a vitrine pública quanto os dados restritos.
 
-* **[CSP] Content Security Policy:** Headers rigorosos prevenindo XSS e injeção de scripts.
-* **[Session Hardening]**: Cookies `HttpOnly`, `Secure`, `Strict` e regeneração de ID de sessão.
-* **[Logs de Auditoria]**: Registro imutável de logins (sucesso/falha), uploads, downloads e edições de registros.
-* **[Sanitização]**: Tratamento recursivo de inputs e uploads de arquivos (verificação de extensão/MIME).
-* **[Anti-Bruteforce]**: Limitação de tentativas de login por sessão/IP.
+### No Site Público (`index.php`):
+* **Rate Limiting:** Bloqueio temporário de IPs que excedem o limite de requisições (proteção DDoS L7).
+* **Session Hardening:** Cookies `HttpOnly`, `Secure` e `SameSite=Strict`.
+* **XSS Protection:** Nonces criptográficos para scripts inline e bloqueio de origens externas não autorizadas.
+* **Anti-Spam:** Validação de tempo de preenchimento e honeypots.
+
+### Na Intranet:
+* **Logs Imutáveis:** Registro de todas as ações críticas (Login, Upload, Delete).
+* **Isolamento:** Pasta de uploads (`data/`) fora do acesso direto público quando possível ou protegida via `.htaccess`.
+* **Anti-Bruteforce:** Bloqueio de conta após N tentativas falhas.
 
 ---
 
 ## ⚙️ Instalação
 
 ### Pré-requisitos
-* PHP 8.0+ (extensões: `pdo`, `mbstring`, `zip`, `gd`, `curl`).
-* MySQL 5.7+ ou MariaDB.
-* Servidor Web (Apache com `mod_rewrite` ativado).
+* PHP 8.0+ (extensões: `pdo`, `curl`, `mbstring`, `zip`, `gd`).
+* MySQL 5.7+.
 
 ### Passo a Passo
 
@@ -109,26 +124,23 @@ A segurança implementa o conceito de **Defense in Depth** (Defesa em Profundida
     ```
 
 2.  **Banco de Dados:**
-    * Importe o script `database/schema.sql` para criar a estrutura inicial.
-    * O sistema criará automaticamente um usuário `admin` padrão se a tabela estiver vazia na inicialização.
+    * Importe `database/schema.sql`. Ele criará as tabelas tanto para o site (logs de visita) quanto para a intranet (usuários, obras).
 
 3.  **Configuração:**
-    * Renomeie `src/config/db_config.example.php` para `db_config.php`.
-    * Configure as credenciais do banco de dados e chave de API (se aplicável).
+    * Renomeie `src/config/db_config.example.php` para `db_config.php` e configure as credenciais.
+    * Configure o arquivo `.env` na raiz com sua `GEMINI_API_KEY`.
 
-4.  **Permissões:**
-    * Garanta permissão de escrita nas pastas:
-      * `/src/intranet/data/logs/`
-      * `/src/intranet/data/uploads/`
-      * `/src/intranet/data/ged_repository/`
+4.  **Estrutura de Pastas:**
+    * `/src/public_site`: Aponte o domínio principal (ex: `coiengenharia.com.br`) para cá.
+    * `/src/intranet`: Aponte o subdomínio (ex: `intranet.coiengenharia.com.br`) para cá.
 
 ---
 
 ## 👤 Autor
 
-**Eng. Marcelo de Barros** *CEO da COI Engenharia & Full Stack Developer por I.A*
+**Eng. Marcelo de Barros** *CEO da COI Engenharia & Full Stack Developer*
 
-Engenheiro Civil com expertise em grandes obras (Usina Nuclear Angra 3, Rodovias) e desenvolvimento de soluções tecnológicas para o setor de construção civil.
+Engenheiro Civil com expertise em grandes obras (Usina Nuclear Angra 3, Rodovias) e desenvolvimento de soluções tecnológicas de alta complexidade.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/108664081/) 
 [![COI Engenharia](https://img.shields.io/badge/COI_Engenharia-Website_Oficial-0D2C54?style=for-the-badge&logo=google-chrome&logoColor=white)](https://coiengenharia.com.br)

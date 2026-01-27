@@ -28,8 +28,13 @@ Diferente de CMSs padrões, este sistema foi construído **do zero (Vanilla PHP)
 
 | **Dashboard da Intranet** | **Chatbot com IA (Gemini)** |
 |:---:|:---:|
-| <img src="https://placehold.co/600x400?text=Print+do+Dashboard" alt="Dashboard" width="100%"> | <img src="https://placehold.co/600x400?text=Print+do+Chatbot" alt="Chatbot" width="100%"> |
+| <img src="assets/intranet.png" alt="Dashboard" width="100%"> | <img src="assets/chat_ia.png" alt="Chatbot" width="100%"> |
 | *Visão geral de obras e métricas* | *Assistente virtual contextualizado* |
+
+| **Engenharia de Código** |
+|:---:|
+| <img src="assets/1.png" alt="VS Code" width="100%"> |
+| *Estrutura do código e implementação* |
 
 ---
 

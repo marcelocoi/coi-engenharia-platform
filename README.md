@@ -1,15 +1,27 @@
 <div align="center">
 
-  <img src="src/public_site/LOGO.png" alt="COI Engenharia Logo" width="150" />
+  <a href="https://coiengenharia.com.br" target="_blank">
+    <img src="src/public_site/LOGO.png" alt="COI Engenharia Logo" width="150" />
+  </a>
 
   # Case Study: Enterprise Architecture & AI-Assisted Development
   
   **A prova técnica de que Sistemas Corporativos de Alta Complexidade, Seguros e Performáticos podem ser construídos com auxílio de IA.**
 
-  [![Security Rating](https://img.shields.io/badge/SecurityHeaders.com-A%2B-success?style=for-the-badge&logo=security&logoColor=white)](https://securityheaders.com/?q=https%3A%2F%2Fcoiengenharia.com.br&followRedirects=on)
-  [![PHP Version](https://img.shields.io/badge/php-8.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
-  [![Architecture](https://img.shields.io/badge/Architecture-Vanilla%20MVC-important?style=for-the-badge&logo=architect&logoColor=white)](#-arquitetura-e-filosofia-no-framework)
-  [![AI Engine](https://img.shields.io/badge/Built_With-Gemini_2.0_%26_Antigravity-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white)](#-o-desafio-ia-vs-qualidade)
+  <a href="https://securityheaders.com/?q=https%3A%2F%2Fcoiengenharia.com.br&followRedirects=on" target="_blank">
+    <img src="https://img.shields.io/badge/SecurityHeaders.com-A%2B-success?style=for-the-badge&logo=security&logoColor=white" alt="Security Rating">
+  </a>
+  <a href="https://www.php.net/" target="_blank">
+    <img src="https://img.shields.io/badge/php-8.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP Version">
+  </a>
+  <a href="#-arquitetura-e-filosofia-no-framework">
+    <img src="https://img.shields.io/badge/Architecture-Vanilla%20MVC-important?style=for-the-badge&logo=architect&logoColor=white" alt="Architecture">
+  </a>
+  <a href="#-o-desafio-ia-vs-qualidade">
+    <img src="https://img.shields.io/badge/Built_With-Gemini_2.0_%26_Antigravity-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white" alt="AI Engine">
+  </a>
+
+  <br><br>
 
   [O Desafio](#-o-propósito-deste-repositório) • [Segurança Comprovada](#-segurança-militar-defense-in-depth) • [Ecossistema](#-ecossistema-técnico) • [Intranet](#-módulo-restrito-intranet--rdo) • [Convite à Análise](#-convite-aos-code-reviewers)
 
@@ -36,10 +48,18 @@ O código aqui presente sustenta a operação real da **COI Engenharia**, gerenc
 A segurança não é um "plugin" instalado no final. Ela é nativa da aplicação. O site obteve nota máxima em auditorias externas, superando grandes portais corporativos.
 
 ### 🏆 Evidências de Auditoria
-* **SecurityHeaders.com:** Grade **A+** [[Ver Relatório](https://securityheaders.com/?q=https%3A%2F%2Fcoiengenharia.com.br&followRedirects=on)]
-* **CoreNexis:** Score de Compliance Total [[Ver Relatório](https://tools.corenexis.com/web/security-headers)]
 
-*(Insira aqui o print do SecurityHeaders A+ se desejar: `![Security Score](assets/security_score.png)`)*
+Os relatórios abaixo são gerados em tempo real por autoridades independentes em segurança web.
+
+* **SecurityHeaders.com:** Grade **A+** [<a href="https://securityheaders.com/?q=https%3A%2F%2Fcoiengenharia.com.br&followRedirects=on" target="_blank">Ver Relatório em Tempo Real</a>]
+* **CoreNexis:** Score de Compliance Total [<a href="https://tools.corenexis.com/web/security-headers" target="_blank">Ver Ferramenta</a>]
+
+<br>
+
+| **SecurityHeaders A+ (Grade Máxima)** | **CoreNexis Compliance** |
+|:---:|:---:|
+| <a href="assets/security_headers.png" target="_blank"><img src="assets/security_headers.png" alt="Print SecurityHeaders A+" width="100%"></a> | <a href="assets/corenexis.png" target="_blank"><img src="assets/corenexis.png" alt="Print CoreNexis" width="100%"></a> |
+| *Auditoria de 27/01/2026* | *Validação de Headers Críticos* |
 
 ### Implementação Técnica (Hardening)
 Diferente de frameworks que mascaram a segurança, aqui implementamos "na unha" (Vanilla PHP):
@@ -91,7 +111,7 @@ O sistema é dividido em dois núcleos que compartilham o mesmo banco de dados, 
 
 | **Dashboard Operacional** | **Inteligência Artificial Integrada** |
 |:---:|:---:|
-| <img src="assets/intranet.png" alt="Dashboard Intranet" width="100%"> | <img src="assets/chat_ia.png" alt="Chatbot Gemini" width="100%"> |
+| <a href="assets/intranet.png" target="_blank"><img src="assets/intranet.png" alt="Dashboard Intranet" width="100%"></a> | <a href="assets/chat_ia.png" target="_blank"><img src="assets/chat_ia.png" alt="Chatbot Gemini" width="100%"></a> |
 | *Visão gerencial em tempo real* | *Assistente treinado com contexto da empresa* |
 
 ---
@@ -135,8 +155,12 @@ Este projeto prova que a **Inteligência Artificial**, quando guiada por um prof
 
 Liderando a transformação digital na construção civil pesada através de código proprietário e seguro.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marcelocoi/) 
-[![COI Engenharia](https://img.shields.io/badge/COI_Engenharia-Website_Oficial-0D2C54?style=for-the-badge&logo=google-chrome&logoColor=white)](https://coiengenharia.com.br)
+<a href="https://www.linkedin.com/in/marcelocoi/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-Conectar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
+<a href="https://coiengenharia.com.br" target="_blank">
+  <img src="https://img.shields.io/badge/COI_Engenharia-Website_Oficial-0D2C54?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website Oficial">
+</a>
 
 ---
 

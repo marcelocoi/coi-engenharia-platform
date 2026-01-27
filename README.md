@@ -118,6 +118,10 @@ O sistema é dividido em dois núcleos que compartilham o mesmo banco de dados, 
 |:---:|
 | <a href="assets/ged_explorer.png" target="_blank"><img src="assets/ged_explorer.png" alt="GED estilo Windows Explorer" width="100%"></a> |
 | *Gestão de documentos com UX similar ao Windows Explorer (Pastas, Ícones, Arrastar e Soltar)* |
+| **Monitoramento em tempo real do domínio** |
+|:---:|
+| <a href="assets/mon.png" target="_blank"><img src="assets/mon.png" alt="Monitoramento do Sistema em tempo real" width="100%"></a> |
+| *Monitoramento de origem de IPs em tempo real (HTTPS) Resumo de Tráfego (Webalizer)* |
 
 ---
 

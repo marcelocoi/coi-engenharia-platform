@@ -164,12 +164,23 @@ Este projeto prova que a **Inteligência Artificial**, quando guiada por um prof
 
 Liderando a transformação digital na construção civil pesada através de código proprietário e seguro.
 
-<a href="https://www.linkedin.com/in/marcelocoi/" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-Conectar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-</a>
-<a href="https://coiengenharia.com.br" target="_blank">
-  <img src="https://img.shields.io/badge/COI_Engenharia-Website_Oficial-0D2C54?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website Oficial">
-</a>
+<p align="left">
+  <a href="https://www.linkedin.com/in/marcelocoi/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Conectar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+
+  <a href="https://coiengenharia.com.br" target="_blank">
+    <img src="https://img.shields.io/badge/COI_Engenharia-Website_Oficial-0D2C54?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website Oficial">
+  </a>
+
+  <a href="https://wa.me/5524998416319" target="_blank">
+    <img src="https://img.shields.io/badge/WhatsApp-(24)_99841--6319-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
+  </a>
+
+  <a href="mailto:marcelocoi@hotmail.com">
+    <img src="https://img.shields.io/badge/Email-marcelocoi@hotmail.com-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Email">
+  </a>
+</p>
 
 ---
 

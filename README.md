@@ -114,10 +114,10 @@ O sistema é dividido em dois núcleos que compartilham o mesmo banco de dados, 
 | <a href="assets/intranet.png" target="_blank"><img src="assets/intranet.png" alt="Dashboard Intranet" width="100%"></a> | <a href="assets/chat_ia.png" target="_blank"><img src="assets/chat_ia.png" alt="Chatbot Gemini" width="100%"></a> |
 | *Visão gerencial em tempo real* | *Assistente treinado com contexto da empresa* |
 
-| **GED: Experiência Desktop na Web** | **Engenharia Visual: WebGL Nativo** |
-|:---:|:---:|
-| <a href="assets/ged_explorer.png" target="_blank"><img src="assets/ged_explorer.png" alt="GED estilo Windows Explorer" width="100%"></a> | <a href="assets/webgl_render.png" target="_blank"><img src="assets/webgl_render.png" alt="WebGL 3D Rendering" width="100%"></a> |
-| *Gestão de arquivos com Drag & Drop* | *Renderização 3D de estruturas sem engines pesadas* |
+| **GED: Experiência Desktop na Web** |
+|:---:|
+| <a href="assets/ged_explorer.png" target="_blank"><img src="assets/ged_explorer.png" alt="GED estilo Windows Explorer" width="100%"></a> |
+| *Gestão de documentos com UX similar ao Windows Explorer (Pastas, Ícones, Arrastar e Soltar)* |
 
 ---
 

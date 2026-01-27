@@ -1,0 +1,9 @@
+﻿/src/config/db_config.php
+/src/intranet/data/logs/
+/src/intranet/data/uploads/
+/src/intranet/data/ged_repository/
+/src/intranet/data/rate_limits/
+.env
+*.log
+.DS_Store
+Thumbs.db
